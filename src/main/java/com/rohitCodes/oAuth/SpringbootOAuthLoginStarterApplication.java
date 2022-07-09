@@ -18,6 +18,6 @@ public class SpringbootOAuthLoginStarterApplication {
 	@GetMapping("/user")
 	public String user(@AuthenticationPrincipal OAuth2User principal){
 		System.out.println(principal);
-		return principal.getAttribute("login");
+		return principal.getAttribute("name");
 	}
 }
